@@ -4,40 +4,6 @@ library(TCGAbiolinks)
 if(!require(pacman)) install.packages("pacman")
 library(pacman)
 
-#What line of code needs to be added before using TCGAbiolinks?
-
-#add barcodes argument to query if you want to run on your local machine for smaller files downloaded
-#barcodes_rnaseq <- c("TCGA-BH-A0DG-01A-21R-A12P-07","TCGA-A2-A0YF-01A-21R-A109-07",
-#          "TCGA-AN-A04A-01A-21R-A034-07","TCGA-AR-A1AP-01A-11R-A12P-07",
-#              "TCGA-A2-A0T3-01A-21R-A115-07", "TCGA-E2-A154-01A-11R-A115-07" )
-#barcodes_clinic <- c("TCGA-BH-A0DG","TCGA-A2-A0YF","TCGA-AN-A04A","TCGA-AR-A1AP", "TCGA-A2-A0T3",
-#                      "TCGA-E2-A154", "TCGA-AO-A12F", "TCGA-A2-A0YM", "TCGA-BH-A0E0", "TCGA-AN-A0FL")
-
-
-#######    Group 1: RNASeq     ############
-# library(SummarizedExperiment)
-# query <- GDCquery(project = "TCGA-BRCA",
-#                   data.category = "Transcriptome Profiling",
-#                   data.type = "Gene Expression Quantification",
-#                   workflow.type = "HTSeq - Counts")
-# GDCdownload(query) #only need this line of code once to download the data
-# sum_exp <- GDCprepare(query)
-# Create a tutorial on SummarizedExperiment
-
-# Boxplots by age
-# Add a new column to colData called "age_category"
-# If age_at_initial_pathologic_diagnosis is < 40, define patient as "Young" in new column
-# If age_at_initial_pathologic_diagnosis is >= 60, define patient as "Old" in new column
-# Other patients (between 40 and 60), define as "Mid"
-# Choose 3 genes of interest from the paper presentations
-# Create 3 different boxplots with age_category on x-axis, counts on the y-axis by repeating the below code for each gene
-# remember to give your plot a title and informative axis labels
-# png("boxplot_genename.png")
-# boxplot(FILL IN HERE)
-# *Feel free to add lines here that format your boxplot*
-# dev.off()
-# Use rsync to copy your create pngfile to local machine for viewing
-
 #######    Group 2: clinical   ###########
 p_load(survival) #What do you need to do before running this line?
 p_load(survminer) #What do you need to do before running this line?
@@ -75,7 +41,9 @@ names(subtypes) = make.names(names(subtypes))
 table_arse <- tableby(age_category ~ (pathologic_stage)+ (mRNA.Clusters)+ (BRCA_Pathology),
 	          data = subtypes, numeric.test="kwt", cat.test="fe", 
 	          numeric.stats = c("Nmiss", "meansd"), total=FALSE)
-df <- as.data.frame( summary(table_arse, text=TRUE, pfootnote=TRUE) )                                                                                                                                                                                             df <- as.data.frame( summary(table_arse, text=TRUE, pfootnote=TRUE) )
+df <- as.data.frame( summary(table_arse, text=TRUE, pfootnote=TRUE) 
+
+# error: try increasing the size of the workspace and possibly 'mult'                                                                                                                                                                                             df <- as.data.frame( summary(table_arse, text=TRUE, pfootnote=TRUE) )
 write.csv(df, “filepath/filename.csv”, row.names=FALSE)
 
 # Modify below code for different variables of interest
@@ -92,6 +60,6 @@ clinic$death_event <- ifelse(clinic$patient.vital_status == 'alive', 0,1)
 colnames(clinic) #use if want to visually see affect of ^^
 cox_fit <- coxph(Surv(overall_survival, death_event)~age_at_initial_pathologic_diagnosis, data=clinic)
 jpeg("cox_plot_age_continuous.jpg")
-ggcoxadjustedcurves(fit, data=lung)
+ggadjustedcurves(fit, data=lung)
 dev.off()
 # Use rsync to copy figure onto local system and view
