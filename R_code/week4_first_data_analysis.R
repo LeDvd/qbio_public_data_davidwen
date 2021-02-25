@@ -42,8 +42,9 @@ library(pacman)
 p_load(survival) #What do you need to do before running this line?
 p_load(survminer) #What do you need to do before running this line?
 p_load(arsenal) #What do you need to do before running this line?
-clin_query <- GDCquery(project = "TCGA-BRCA", data.category="Clinical", file.type="xml")
-GDCdownload( clin_query ) #should only need this command once. This downloads the files onto your system.
+p_load(dplyr)
+# clin_query <- GDCquery(project = "TCGA-BRCA", data.category="Clinical", file.type="xml")
+# GDCdownload( clin_query ) #should only need this command once. This downloads the files onto your system.
 clinic <- GDCprepare_clinic(clin_query, clinical.info="patient")
 names(clinic)[names(clinic) == "days_to_last_followup"] = "days_to_last_follow_up"
 
@@ -52,14 +53,17 @@ names(clinic)[names(clinic) == "days_to_last_followup"] = "days_to_last_follow_u
 #If age_at_initial_pathologic_diagnosis is >= 60, define patient as "Old" in new column
 #Other patients (between 40 and 60), define as "Mid"
 
-age = clinic$age_at_initial_pathologic_diagnosis
+age_clinical = clinic$age_at_initial_pathologic_diagnosis
 
-clinic$age_category = ifelse(age < 40, "Young", ifelse(age >= 60, "Old", "Mid"))
+clinic$age_category = ifelse(age_clinical < 40, "Young", ifelse(age_clinical >= 60, "Old", "Mid"))
 
 # use tableone to create summary of clinic data
 p_load(tableone)
 clinic_summary = CreateTableOne(data=clinic)
 subtypes <- TCGAquery_subtype(tumor = "BRCA")
+age_subs = subtypes$age_at_initial_pathologic_diagnosis
+subtypes$age_category = ifelse(age_subs < 40, "Young", ifelse(age_subs >= 60, "Old", "Mid"))
+
 # Add the age_category column in the same way as above
 # How many patients are in subtypes vs clinic? Why?
 
@@ -67,9 +71,10 @@ subtypes <- TCGAquery_subtype(tumor = "BRCA")
 # Consider what you need to change for it to run on clinic
 # Hint: age_category stays the same. "Oncotree.Code" was the name of a column
 # Option to use either subtypes or clinic dataframe
-table_arse <- tableby(age_category ~ (Age.at.Diagnosis) +(Oncotree.Code) +
-#          (ER.Status) + (Pam50) + (Tumor.Stage) + (Ethnicity.Call), data=clinic_oneone,
-#          numeric.test="kwt", cat.test="fe", numeric.stats = c("Nmiss", "meansd"), total=FALSE)
+names(subtypes) = make.names(names(subtypes))
+table_arse <- tableby(age_category ~ (pathologic_stage)+ (mRNA.Clusters)+ (BRCA_Pathology),
+	          data = subtypes, numeric.test="kwt", cat.test="fe", 
+	          numeric.stats = c("Nmiss", "meansd"), total=FALSE)
 df <- as.data.frame( summary(table_arse, text=TRUE, pfootnote=TRUE) )                                                                                                                                                                                             df <- as.data.frame( summary(table_arse, text=TRUE, pfootnote=TRUE) )
 write.csv(df, “filepath/filename.csv”, row.names=FALSE)
 
@@ -90,16 +95,3 @@ jpeg("cox_plot_age_continuous.jpg")
 ggcoxadjustedcurves(fit, data=lung)
 dev.off()
 # Use rsync to copy figure onto local system and view
-
-#######    Group 3: MAF   ###########
-# BiocManager::install("maftools")
-# library(maftools)
-# mutation <- GDCquery_Maf(tumor = "BRCA",save.csv=TRUE, pipeline="") #choose a pipeline
-# after running ^^, navigate to the saved csv file. Open the csv file with below Code
-# only need to query once. For repeating code, you can just read in the saved dataframe you created
-# maf_dataframe <- read.csv("PATH/FILENAME.csv")
-# plotmafSummary(maf = maf_dataframe, rmOutlier = TRUE, addStat = 'median', dashboard = TRUE, titvRaw = FALSE)
-# pdf("maf_summary.pdf")
-# dev.off()
-# Use rsync to copy onto local machine and view
-# Create figures from Part 7: https://bioconductor.riken.jp/packages/devel/bioc/vignettes/maftools/inst/doc/maftools.html#7_Visualization
