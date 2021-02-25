@@ -39,12 +39,13 @@ subtypes$age_category = ifelse(age_subs < 40, "Young", ifelse(age_subs >= 60, "O
 # Option to use either subtypes or clinic dataframe
 names(subtypes) = make.names(names(subtypes))
 table_arse <- tableby(age_category ~ (pathologic_stage)+ (mRNA.Clusters)+ (BRCA_Pathology),
-	          data = subtypes, numeric.test="kwt", cat.test="fe", 
+	          data = subtypes, numeric.test="kwt", cat.test="chisq", 
 	          numeric.stats = c("Nmiss", "meansd"), total=FALSE)
-df <- as.data.frame( summary(table_arse, text=TRUE, pfootnote=TRUE) 
+df <- as.data.frame(summary(table_arse, text=TRUE, pfootnote=TRUE))
 
 # error: try increasing the size of the workspace and possibly 'mult'                                                                                                                                                                                             df <- as.data.frame( summary(table_arse, text=TRUE, pfootnote=TRUE) )
-write.csv(df, “filepath/filename.csv”, row.names=FALSE)
+
+write.csv(df, "data/tby.csv", row.names=FALSE)
 
 # Modify below code for different variables of interest
 # The "gender" can be changed to any of the column names of the clinic dataframe
@@ -53,7 +54,7 @@ write.csv(df, “filepath/filename.csv”, row.names=FALSE)
 #TCGAanalyze_survival( clinic, "age_category", filename="survival_age_category.pdf")
 TCGAanalyze_survival(clinic, "ethnicity", filename="./survival_curves/survival_ethnicity.pdf")
 TCGAanalyze_survival(clinic, "menopause_status", filename="./survival_curves/survival_menopause.pdf")
-TCGAanalyze_survival(clinic, "breast_carcinoma_progesterone_receptor_status", filename="./survival_curves/survival_progesterone")
+TCGAanalyze_survival(clinic, "breast_carcinoma_progesterone_receptor_status", filename="./survival_curves/survival_progesterone.pdf")
 
 # use ls to confirm the file was created
 # rsync to copy and view on local computer
