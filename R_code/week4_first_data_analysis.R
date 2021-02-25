@@ -9,7 +9,7 @@ p_load(survival) #What do you need to do before running this line?
 p_load(survminer) #What do you need to do before running this line?
 p_load(arsenal) #What do you need to do before running this line?
 p_load(dplyr)
-# clin_query <- GDCquery(project = "TCGA-BRCA", data.category="Clinical", file.type="xml")
+clin_query <- GDCquery(project = "TCGA-BRCA", data.category="Clinical", file.type="xml")
 # GDCdownload( clin_query ) #should only need this command once. This downloads the files onto your system.
 clinic <- GDCprepare_clinic(clin_query, clinical.info="patient")
 names(clinic)[names(clinic) == "days_to_last_followup"] = "days_to_last_follow_up"
