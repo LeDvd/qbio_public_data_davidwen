@@ -49,8 +49,12 @@ write.csv(df, “filepath/filename.csv”, row.names=FALSE)
 # Modify below code for different variables of interest
 # The "gender" can be changed to any of the column names of the clinic dataframe
 # Look at the dataframe via the str(clinic) command
-TCGAanalyze_survival( clinic, "gender", filename="survival_gender.pdf")
-TCGAanalyze_survival( clinic, "age_category", filename="survival_age_category.pdf")
+#TCGAanalyze_survival( clinic, "gender", filename="survival_gender.pdf")
+#TCGAanalyze_survival( clinic, "age_category", filename="survival_age_category.pdf")
+TCGAanalyze_survival(clinic, "ethnicity", filename="./survival_curves/survival_ethnicity.pdf")
+TCGAanalyze_survival(clinic, "menopause_status", filename="./survival_curves/survival_menopause.pdf")
+TCGAanalyze_survival(clinic, "breast_carcinoma_progesterone_receptor_status", filename="./survival_curves/survival_progesterone")
+
 # use ls to confirm the file was created
 # rsync to copy and view on local computer
 
@@ -60,6 +64,6 @@ clinic$death_event <- ifelse(clinic$patient.vital_status == 'alive', 0,1)
 colnames(clinic) #use if want to visually see affect of ^^
 cox_fit <- coxph(Surv(overall_survival, death_event)~age_at_initial_pathologic_diagnosis, data=clinic)
 jpeg("cox_plot_age_continuous.jpg")
-ggadjustedcurves(fit, data=lung)
+ggadjustedcurves(fit, data=clinic)
 dev.off()
 # Use rsync to copy figure onto local system and view
