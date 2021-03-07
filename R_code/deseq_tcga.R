@@ -13,26 +13,28 @@ theme_set(theme_bw())
 # clinical_file <- read.csv("../data/tcga_brca_six_example_clinical.csv")
 # barcodes <- as.character( clinical_file$barcode )
 
-# you know the drill
-query = GDCquery(project = "TCGA-BRCA", 
-                 data.category = "Transcriptome Profiling",
-                 data.type = "Gene Expression Quantification",
-                 workflow.type = "HTSeq - Counts")
-
-# GDCdownload(query)
-data = GDCprepare(query)
-
-# need to remove NA values
-data = data[, !is.na(data$age_at_index)]
-data$age_cat = factor(ifelse(data$age_at_index >= 60, "old", 
-                        ifelse(data$age_at_index <= 40, "young", "mid")),
-                      levels = c("young", "mid", "old"))
-
-
-# standard DESeq pipeline
-dds = DESeqDataSet(data, design = ~ age_cat)
-DE_obj = DESeq(dds)
-saveRDS(DE_obj, file = "deseq.rds") # i dont wanna run this again
+if (!"deseq.rds" %in% list.files()){
+  # you know the drill
+  query = GDCquery(project = "TCGA-BRCA", 
+                   data.category = "Transcriptome Profiling",
+                   data.type = "Gene Expression Quantification",
+                   workflow.type = "HTSeq - Counts")
+  
+  # GDCdownload(query)
+  data = GDCprepare(query)
+  
+  # need to remove NA values
+  data = data[, !is.na(data$age_at_index)]
+  data$age_cat = factor(ifelse(data$age_at_index >= 60, "old", 
+                          ifelse(data$age_at_index <= 40, "young", "mid")),
+                        levels = c("young", "mid", "old"))
+  
+  
+  # standard DESeq pipeline
+  dds = DESeqDataSet(data, design = ~ age_cat)
+  DE_obj = DESeq(dds)
+  saveRDS(DE_obj, file = "deseq.rds") # i dont wanna run this again
+}
 
 res = results(DE_obj)
 resLFC = lfcShrink(DE_obj, coef = "age_cat_old_vs_young", type = "apeglm")
