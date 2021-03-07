@@ -19,8 +19,11 @@ query = GDCquery(project = "TCGA-BRCA",
                  data.type = "Gene Expression Quantification",
                  workflow.type = "HTSeq - Counts")
 
-GDCdownload(query)
+# GDCdownload(query)
 data = GDCprepare(query)
+
+# need to remove NA values
+data = data[, !is.na(data$age_at_index)]
 data$age_cat = factor(ifelse(data$age_at_index >= 60, "old", 
                         ifelse(data$age_at_index <= 40, "young", "mid")),
                       levels = c("young", "mid", "old"))
@@ -29,6 +32,8 @@ data$age_cat = factor(ifelse(data$age_at_index >= 60, "old",
 # standard DESeq pipeline
 dds = DESeqDataSet(data, design = ~ age_cat)
 DE_obj = DESeq(dds)
+saveRDS(DE_obj, file = "deseq.rds") # i dont wanna run this again
+
 res = results(DE_obj)
 resLFC = lfcShrink(DE_obj, coef = "age_cat_old_vs_young", type = "apeglm")
 resOrdered = res[order(res$padj), ]
@@ -51,6 +56,6 @@ volc_plot = ggplot(data = volc_plot_data, aes(x = log2FoldChange, y = -log10(pad
                scale_color_manual(values = cols)
 
 # save outputs
-ggsave("../diff_analysis/PCA_plot.png", plot = PCA_plot, device = "png", width = 11, height = 8.5, units = "in")
-ggsave("../diff_analysis/volc_plot.png", plot = volc_plot, device = "png", width = 11, height = 8.5, units = "in")
-ggsave("../diff_analysis/MA_plot.png", plot = MA_plot, device = "png", width = 11, height = 8.5, units = "in")
+ggsave("/diff_analysis/PCA_plot.png", plot = PCA_plot, device = "png", width = 11, height = 8.5, units = "in")
+ggsave("/diff_analysis/volc_plot.png", plot = volc_plot, device = "png", width = 11, height = 8.5, units = "in")
+ggsave("/diff_analysis/MA_plot.png", plot = MA_plot, device = "png", width = 11, height = 8.5, units = "in")
