@@ -22,6 +22,7 @@ names(clinic)[names(clinic) == "days_to_last_followup"] = "days_to_last_follow_u
 age_clinical = clinic$age_at_initial_pathologic_diagnosis
 
 clinic$age_category = ifelse(age_clinical < 40, "Young", ifelse(age_clinical >= 60, "Old", "Mid"))
+clinic$is_metastatic = ifelse(clinic$stage_event_pathologic_stage == "Stage IV", "metastatic", "not_metastatic")
 
 # use tableone to create summary of clinic data
 p_load(tableone)
@@ -38,7 +39,9 @@ subtypes$age_category = ifelse(age_subs < 40, "Young", ifelse(age_subs >= 60, "O
 # Hint: age_category stays the same. "Oncotree.Code" was the name of a column
 # Option to use either subtypes or clinic dataframe
 names(subtypes) = make.names(names(subtypes))
-table_arse <- tableby(age_category ~ (pathologic_stage)+ (mRNA.Clusters)+ (BRCA_Pathology),
+subtypes$is_metastatic = ifelse(subtypes$pathologic_stage == "Stage_IV", "metastatic", "not_metastatic")
+
+table_arse <- tableby(age_category ~ (pathologic_stage) + (mRNA.Clusters) + (BRCA_Pathology) + (is_metastatic),
 	          data = subtypes, numeric.test="kwt", cat.test="chisq", 
 	          numeric.stats = c("Nmiss", "meansd"), total=FALSE)
 df <- as.data.frame(summary(table_arse, text=TRUE, pfootnote=TRUE))
