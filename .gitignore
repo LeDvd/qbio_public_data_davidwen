@@ -42,3 +42,4 @@ GDC_data/
 GDCdata/
 
 .DS_Store
+*.rds

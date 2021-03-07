@@ -34,10 +34,18 @@ if (!"deseq.rds" %in% list.files()){
   dds = DESeqDataSet(data, design = ~ age_cat)
   DE_obj = DESeq(dds)
   saveRDS(DE_obj, file = "deseq.rds") # i dont wanna run this again
+} else{
+  DE_obj = readRDS(file = "deseq.rds")
+}
+res = results(DE_obj)
+
+if (!"resLFC.rds" %in% list.files("./R_code")){
+  resLFC = lfcShrink(DE_obj, coef = "age_cat_old_vs_young", type = "apeglm")
+  saveRDS(resLFC, file = "R_code/resLFC.rds")
+} else{
+  resLFC = readRDS(file = "./R_code/resLFC.rds")
 }
 
-res = results(DE_obj)
-resLFC = lfcShrink(DE_obj, coef = "age_cat_old_vs_young", type = "apeglm")
 resOrdered = res[order(res$padj), ]
 
 # check for biases
@@ -48,16 +56,19 @@ vsd <- vst(DE_obj, blind=FALSE)
 PCA_plot = plotPCA(vsd, intgroup = "age_cat")
 
 # create a volcano plot
+sig_thresh = 0.01
 volc_plot_data = data.frame(res)
-volc_plot_data$signif = ifelse(volc_plot_data$padj <= 0.05, "sig", "nsig")
+volc_plot_data$signif = ifelse(volc_plot_data$padj <= 0.01, "sig", "nsig")
 cols = c("red", "black")
 names(cols) = c("sig", "nsig")
 volc_plot = ggplot(data = volc_plot_data, aes(x = log2FoldChange, y = -log10(padj), color = signif)) + 
                geom_point() + 
-               geom_hline(yintercept = -log10(0.05), col = "red") +
+               geom_hline(yintercept = -log10(sig_thresh), col = "red") +
                scale_color_manual(values = cols)
 
-# save outputs
-ggsave("/diff_analysis/PCA_plot.png", plot = PCA_plot, device = "png", width = 11, height = 8.5, units = "in")
-ggsave("/diff_analysis/volc_plot.png", plot = volc_plot, device = "png", width = 11, height = 8.5, units = "in")
-ggsave("/diff_analysis/MA_plot.png", plot = MA_plot, device = "png", width = 11, height = 8.5, units = "in")
+print(cat("there are ", sum(volc_plot_data$signif == "sig") , " DEGs"))
+
+# saves outputs
+ggsave("./diff_analysis/PCA_plot.png", plot = PCA_plot, device = "png", width = 11, height = 8.5, units = "in")
+ggsave("./diff_analysis/volc_plot.png", plot = volc_plot, device = "png", width = 11, height = 8.5, units = "in")
+ggsave("./diff_analysis/MA_plot.png", plot = MA_plot, device = "png", width = 11, height = 8.5, units = "in")
