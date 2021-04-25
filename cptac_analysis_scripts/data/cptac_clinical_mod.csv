@@ -1,0 +1,123 @@
+,Patient_ID,Replicate_Measurement_IDs,Sample_Tumor_Normal,Age.in.Month,Gender,Race,Human.Readable.Label,Experiment,Channel,Stage,PAM50,NMF.v2.1,ER,PR,ER.IHC.Score,PR.IHC.Score,Coring.or.Excision,Ischemia.Time.in.Minutes,Ischemia.Decade,Necrosis,Tumor.Cellularity,Total.Cellularity,In.CR,QC.status,Age_in_years,age_in_years,Patient Age Category,Stage (Simplified)
+0,CPT000814,CPT000814,Tumor,,,black.or.african.american,CPT000814 0004,13,127C,Stage IIA,Basal,,negative,negative,,,,,,,,,,QC.pass,,,Age > 54 Years,Stage II
+1,CPT001846,CPT001846,Tumor,,,white,CPT001846 0005,12,128C,Stage III,Basal,,negative,negative,,,,,,,,,,QC.pass,,,Age > 54 Years,Stage III
+2,X01BR001,X01BR001,Tumor,660.0,female,black.or.african.american,[17]-af938b_D2,2,129N,Stage IIB,Basal,C4,negative,negative,0,0,coring,0.0,1.0,10.0,70.0,50.0,yes,QC.pass,55.0,55.0,Age > 54 Years,Stage II
+3,X01BR008,X01BR008,Tumor,,,,[cf]-467c39_D1,16,127C,,Basal,C4,,,,,,,,0.0,90.0,60.0,no,QC.pass,,,Age > 54 Years,nan
+4,X01BR009,X01BR009,Tumor,,,,[0e]-051582_D1,16,127N,,Basal,C4,negative,negative,,,,,,0.0,80.0,70.0,no,QC.pass,,,Age > 54 Years,nan
+5,X01BR010,X01BR010,Tumor,,,,[26]-5e5d29_D1,17,130C,,Her2,C1,negative,negative,,,,,,0.0,70.0,70.0,no,QC.pass,,,Age > 54 Years,nan
+6,X01BR015,X01BR015,Tumor,420.0,female,white,[42]-e7fe56_D2,2,128N,Stage IIB,LumA,C3,positive,positive,2+,3+,coring,1.0,1.0,0.0,60.0,50.0,no,QC.pass,35.0,35.0,Age < 54 Years,Stage II
+7,X01BR017,X01BR017,Tumor,540.0,female,white,[09]-e221e0_D2,1,130C,Stage III,Her2,C4,negative,negative,0,0,coring,0.0,1.0,5.0,70.0,70.0,no,QC.pass,45.0,45.0,Age < 54 Years,Stage III
+8,X01BR018,X01BR018,Tumor,792.0,female,white,[d1]-84cfb8_D8,7,129N,Stage IIIA,Basal,C4,positive,negative,2+,0,coring,1.0,1.0,5.0,80.0,30.0,yes,QC.pass,66.0,66.0,Age > 54 Years,Stage III
+9,X01BR020,X01BR020,Tumor,,,,[3f]-2fca26_D1,17,127C,,Basal,C4,negative,negative,,,,,,5.0,98.0,60.0,no,QC.pass,,,Age > 54 Years,nan
+10,X01BR023,X01BR023,Tumor,,,,[c8]-26129c_D1,17,126,,LumA,C2,positive,positive,,,,,,0.0,90.0,60.0,no,QC.pass,,,Age > 54 Years,nan
+11,X01BR025,X01BR025,Tumor,744.0,female,black.or.african.american,[d6]-829353_D2,9,127N,Stage IIIA,LumA,,positive,positive,,2+,coring,6.0,1.0,10.0,60.0,80.0,no,QC.pass,62.0,62.0,Age > 54 Years,Stage III
+12,X01BR026,X01BR026,Tumor,,,white,[88]-0e1f49,16,129N,,Basal,C4,negative,negative,,,,,,0.0,70.0,20.0,no,QC.pass,,,Age > 54 Years,nan
+13,X01BR027,X01BR027,Tumor,960.0,female,black.or.african.american,[19]-91cdc1_D2,3,127N,Stage IIA,Basal,C4,negative,negative,0,0,coring,8.0,1.0,10.0,90.0,80.0,yes,QC.pass,80.0,80.0,Age > 54 Years,Stage II
+14,X01BR030,X01BR030,Tumor,1010.0,female,black.or.african.american,[1f]-38cd2b_D2,7,128C,Stage IIIA,LumA,C3,positive,positive,,,coring,4.0,1.0,0.0,80.0,60.0,no,QC.pass,84.0,84.0,Age > 54 Years,Stage III
+15,X01BR031,X01BR031,Tumor,740.0,female,black.or.african.american,[96]-a71e7c_D2,6,130N,Stage III,Basal,C4,negative,negative,0,0,coring,9.0,1.0,15.0,65.0,50.0,yes,QC.pass,61.0,61.0,Age > 54 Years,Stage III
+16,X01BR032,X01BR032,Tumor,557.0,female,white,[e5]-fd1231_D2,2,130N,Stage IIIB,LumB,C2,positive,positive,4+,4+,excision,0.0,1.0,5.0,75.0,75.0,yes,QC.pass,46.0,46.0,Age < 54 Years,Stage III
+17,X01BR033,X01BR033,Tumor,485.0,female,black.or.african.american,[c6]-daca71_D2,5,128N,Stage III,LumA,C3,positive,positive,3+,2+,coring,10.0,1.0,0.0,60.0,60.0,no,QC.pass,40.0,40.0,Age < 54 Years,Stage III
+18,X01BR040,X01BR040,Tumor,,,black.or.african.american,[4a]-c11709_D2,11,127N,Stage IIB,Basal,C4,negative,negative,,,,,,10.0,80.0,70.0,,QC.pass,,,Age > 54 Years,Stage II
+19,X01BR042,X01BR042,Tumor,,,black.or.african.american,[4d]-d77da9_D2,13,128N,,Basal,C4,negative,negative,,,,,,,,,,QC.pass,,,Age > 54 Years,nan
+20,X01BR043,X01BR043,Tumor,,,white,[c4]-1b83f7_D2,9,129C,,Basal,C4,negative,negative,,,,,,20.0,70.0,60.0,no,QC.pass,,,Age > 54 Years,nan
+21,X03BR002,X03BR002,Tumor,727.0,female,white,[ca]-80f7eb_D2,12,126,Stage IIIA,LumA,,positive,positive,3+,3+,excision,15.0,2.0,0.0,90.0,40.0,no,QC.pass,60.0,60.0,Age > 54 Years,Stage III
+22,X03BR004,X03BR004,Tumor,1064.0,female,white,[46]-be8121_D2,3,130N,Stage IIB,LumA,C3,positive,positive,3+,3+,excision,24.0,3.0,0.0,70.0,75.0,no,QC.pass,88.0,88.0,Age > 54 Years,Stage II
+23,X03BR005,X03BR005,Tumor,738.0,female,white,[96]-dc390b_D2,7,126,Stage IIA,LumA,,positive,positive,3+,3+,excision,12.0,2.0,0.0,70.0,1.0,no,QC.pass,61.0,61.0,Age > 54 Years,Stage II
+24,X03BR006,X03BR006,Tumor,,,white,[07]-348352,16,130N,,Basal,C4,negative,negative,,,,,,10.0,95.0,70.0,no,QC.pass,,,Age > 54 Years,nan
+25,X03BR010,X03BR010,Tumor,943.0,female,white,[49]-139c3d_D2,5,129C,Stage IIA,LumA,C2,positive,positive,3+,3+,excision,21.0,3.0,0.0,80.0,60.0,no,QC.pass,78.0,78.0,Age > 54 Years,Stage II
+26,X03BR011,X03BR011,Tumor,,,white,[60]-5fb803,17,129C,,LumA,C2,positive,negative,,,,,,0.0,70.0,80.0,no,QC.pass,,,Age > 54 Years,nan
+27,X03BR013,X03BR013,Tumor,626.0,female,,[01]-7c40cf_D2,3,128C,Stage IIA,LumA,C3,positive,positive,3+,3+,excision,9.0,1.0,0.0,70.0,50.0,no,QC.pass,52.0,52.0,Age < 54 Years,Stage II
+28,X05BR001,X05BR001,Tumor,840.0,female,white,[55]-d77a5d_D2,6,128N,Stage IIB,Basal,,negative,positive,0,0,excision,29.0,3.0,0.0,90.0,40.0,no,QC.pass,70.0,70.0,Age > 54 Years,Stage II
+29,X05BR003,X05BR003,Tumor,451.0,female,white,[ff]-c23321_D2,9,130N,Stage IIB,LumA,C3,positive,positive,,0,excision,30.0,3.0,0.0,70.0,20.0,no,QC.pass,37.0,37.0,Age < 54 Years,Stage II
+30,X05BR004,X05BR004,Tumor,,,white,[71]-6e1420_D1,16,129C,,LumA,C3,positive,positive,,,,,,0.0,90.0,60.0,no,QC.pass,,,Age > 54 Years,nan
+31,X05BR005,X05BR005,Tumor,600.0,female,white,[68]-35bd46_D2,12,130C,Stage IA,LumA,C3,positive,positive,0,0,excision,11.0,2.0,0.0,65.0,30.0,no,QC.pass,50.0,50.0,Age < 54 Years,Stage I
+32,X05BR009,X05BR009,Tumor,772.0,female,white,[48]-d0e30a_D2,9,126,Stage IIIC,LumA,C3,positive,positive,,0,excision,28.0,3.0,0.0,90.0,10.0,no,QC.pass,64.0,64.0,Age > 54 Years,Stage III
+33,X05BR016,X05BR016,Tumor,938.0,female,white,[3f]-ec3f8d_D2,7,128N,Stage IIB,LumA,C2,positive,positive,0,0,excision,20.0,2.0,0.0,90.0,60.0,yes,QC.pass,78.0,78.0,Age > 54 Years,Stage II
+34,X05BR026,X05BR026,Tumor,858.0,female,white,[d1]-3b2a6f_D2,10,127N,Stage IIA,LumA,C3,positive,positive,0,0,excision,19.0,2.0,0.0,60.0,65.0,no,QC.pass,71.0,71.0,Age > 54 Years,Stage II
+35,X05BR029,X05BR029,Tumor,743.0,female,white,[d0]-9254b0_D2,9,130C,Stage IIA,Basal,C4,negative,negative,0,0,excision,13.0,2.0,0.0,85.0,85.0,yes,QC.pass,61.0,61.0,Age > 54 Years,Stage II
+36,X05BR038,X05BR038,Tumor,627.0,female,white,[94]-03e182_D2,11,128C,Stage IA,LumA,C3,positive,positive,0,0,excision,22.0,3.0,0.0,60.0,65.0,no,QC.pass,52.0,52.0,Age < 54 Years,Stage I
+37,X05BR042,X05BR042,Tumor,480.0,female,white,[8a]-7fceb0_D2,7,129C,Stage IIB,Basal,C4,negative,negative,0,0,excision,20.0,2.0,10.0,80.0,70.0,no,QC.pass,40.0,40.0,Age < 54 Years,Stage II
+38,X05BR043,X05BR043,Tumor,600.0,female,white,[6e]-e2bca3_D2,10,126,Stage IIB,Basal,C4,negative,negative,0,0,excision,16.0,2.0,0.0,75.0,65.0,no,QC.pass,50.0,50.0,Age < 54 Years,Stage II
+39,X05BR044,X05BR044,Tumor,753.0,female,white,[d0]-f95bdf_D2,8,126,Stage IIB,Her2,C1,negative,negative,0,0,excision,17.0,2.0,5.0,75.0,75.0,no,QC.pass,62.0,62.0,Age > 54 Years,Stage II
+40,X05BR045,X05BR045,Tumor,720.0,female,white,[92]-cc9d0c_D2,2,130C,Stage IIA,Basal,C4,negative,negative,0,0,excision,13.0,2.0,0.0,65.0,50.0,no,QC.pass,60.0,60.0,Age > 54 Years,Stage II
+41,X06BR003,X06BR003,Tumor,900.0,female,hispanic.or.latino,[31]-7e67a8_D2,1,129N,Stage IIA,Her2,C1,positive,negative,,,excision,11.0,2.0,0.0,70.0,70.0,no,QC.pass,75.0,75.0,Age > 54 Years,Stage II
+42,X06BR005,X06BR005,Tumor,696.0,female,hispanic.or.latino,[25]-c24e06_D2,8,129C,Stage IIA,LumA,C2,positive,positive,,,excision,15.0,2.0,5.0,90.0,25.0,no,QC.pass,58.0,58.0,Age > 54 Years,Stage II
+43,X06BR006,X06BR006,Tumor,612.0,female,hispanic.or.latino,[37]-ace269_D2,2,126,,Normal,C3,negative,negative,,,coring,14.0,2.0,0.0,80.0,15.0,no,QC.pass,51.0,51.0,Age < 54 Years,nan
+44,X06BR014,X06BR014,Tumor,612.0,female,hispanic.or.latino,[b2]-bdcfed_D2,12,128N,Stage IIB,LumA,C2,positive,positive,,3+,excision,16.0,2.0,0.0,80.0,65.0,no,QC.pass,51.0,51.0,Age < 54 Years,Stage II
+45,X09BR001,X09BR001,Tumor,,,,[20]-628918,17,129N,,LumA,C2,positive,positive,,,,,,0.0,98.0,80.0,no,QC.pass,,,Age > 54 Years,nan
+46,X09BR004,X09BR004,Tumor,904.0,female,white,[cf]-3cd6d5_D2,11,130N,Stage IIA,Normal,C4,positive,positive,3+,2+,excision,12.0,2.0,20.0,60.0,60.0,yes,QC.pass,75.0,75.0,Age > 54 Years,Stage II
+47,X09BR005,X09BR005,Tumor,459.0,female,white,[15]-8eeb48_D2,2,127N,Stage IIB,Her2,C1,positive,positive,2+,2+,excision,22.0,3.0,0.0,70.0,70.0,yes,QC.pass,38.0,38.0,Age < 54 Years,Stage II
+48,X09BR007,X09BR007,Tumor,930.0,female,white,[6c]-57ee3d_D2,4,130N,Stage IIIA,LumA,C3,positive,positive,3+,3+,excision,7.0,1.0,2.0,60.0,55.0,no,QC.pass,77.0,77.0,Age > 54 Years,Stage III
+49,X11BR003,X11BR003,Tumor,643.0,female,asian,[2d]-1e3637_D2,3,130C,Stage IIA,Basal,C4,negative,negative,0,0,excision,5.0,1.0,15.0,90.0,80.0,yes,QC.pass,53.0,53.0,Age < 54 Years,Stage II
+50,X11BR004,X11BR004,Tumor,654.0,female,asian,[48]-89ac6b_D2,9,128C,Stage IIA,Her2,C1,positive,positive,3+,3+,excision,5.0,1.0,0.0,60.0,50.0,no,QC.pass,54.0,54.0,Age > 54 Years,Stage II
+51,X11BR006,X11BR006,Tumor,654.0,female,asian,[47]-85897d_D2,8,127N,Stage IIA,LumA,C3,positive,positive,2+,3+,excision,6.0,1.0,0.0,80.0,30.0,no,QC.pass,54.0,54.0,Age > 54 Years,Stage II
+52,X11BR009,X11BR009,Tumor,530.0,female,asian,[33]-4f8df2_D2,4,128C,Stage IIIC,LumB,C2,positive,positive,3+,3+,excision,1.0,1.0,0.0,80.0,80.0,no,QC.pass,44.0,44.0,Age < 54 Years,Stage III
+53,X11BR010,X11BR010,Tumor,427.0,female,asian,[43]-62617d_D2,6,129C,Stage IIB,LumA,C1,positive,positive,3+,2+,excision,10.0,1.0,1.0,60.0,80.0,no,QC.pass,35.0,35.0,Age < 54 Years,Stage II
+54,X11BR011,X11BR011|X11BR011.REP1,Tumor,858.0,female,asian,[bc]-438bda_D2,6|17,130C|127N,Stage IIIA,LumB,C1,positive,positive,3+,3+,excision,10.0,1.0,0.0,90.0,80.0,yes,QC.pass,71.0,71.0,Age > 54 Years,Stage III
+55,X11BR012,X11BR012,Tumor,924.0,female,white,[98]-d9b7e7_D2,13,130N,Stage IIA,LumA,C2,positive,negative,3+,0,excision,9.0,1.0,0.0,80.0,70.0,yes,QC.pass,77.0,77.0,Age > 54 Years,Stage II
+56,X11BR013,X11BR013,Tumor,840.0,female,white,[fa]-498d67_D2,5,129N,Stage IIA,LumB,C2,positive,negative,3+,0,excision,9.0,1.0,0.0,60.0,60.0,no,QC.pass,70.0,70.0,Age > 54 Years,Stage II
+57,X11BR014,X11BR014,Tumor,476.0,female,white,[dd]-9ccc88_D2,6,128C,Stage IIIA,LumA,C3,positive,positive,2+,3+,excision,11.0,2.0,0.0,80.0,70.0,no,QC.pass,39.0,39.0,Age < 54 Years,Stage III
+58,X11BR015,X11BR015,Tumor,720.0,female,white,[ca]-7da395_D2,9,127C,Stage IIIA,LumB,C2,positive,negative,3+,0,excision,12.0,2.0,0.0,70.0,60.0,yes,QC.pass,60.0,60.0,Age > 54 Years,Stage III
+59,X11BR016,X11BR016,Tumor,371.0,female,white,[a7]-0a4411_D2,8,128C,Stage IIA,Basal,C4,positive,negative,2+,0,excision,12.0,2.0,0.0,80.0,80.0,yes,QC.pass,30.0,30.0,Age < 54 Years,Stage II
+60,X11BR017,X11BR017,Tumor,897.0,female,white,[24]-07c14c_D2,2,127C,Stage IIIA,Her2,C1,negative,negative,0,0,excision,11.0,2.0,0.0,80.0,70.0,yes,QC.pass,74.0,74.0,Age > 54 Years,Stage III
+61,X11BR018,X11BR018,Tumor,653.0,female,white,[85]-ba61a9_D2,8,130C,Stage IIIA,LumA,C3,positive,positive,3+,3+,excision,11.0,2.0,0.0,60.0,25.0,no,QC.pass,54.0,54.0,Age > 54 Years,Stage III
+62,X11BR019,X11BR019,Tumor,735.0,female,white,[8d]-77ecf0_D2,5,127N,Stage IIA,LumB,C2,positive,positive,3+,3+,excision,12.0,2.0,0.0,90.0,80.0,no,QC.pass,61.0,61.0,Age > 54 Years,Stage II
+63,X11BR020,X11BR020,Tumor,450.0,female,white,[94]-5139de_D2,4,130C,Stage IIA,LumA,C1,positive,positive,3+,3+,excision,10.0,1.0,0.0,70.0,60.0,no,QC.pass,37.0,37.0,Age < 54 Years,Stage II
+64,X11BR022,X11BR022,Tumor,584.0,female,white,[da]-27e6b6_D2,5,128C,Stage IIA,LumA,C3,positive,positive,3+,3+,excision,7.0,1.0,0.0,90.0,60.0,no,QC.pass,48.0,48.0,Age < 54 Years,Stage II
+65,X11BR023,X11BR023,Tumor,702.0,female,white,[07]-48cfab_D2,1,128N,Stage IIA,Basal,C4,negative,negative,0,0,excision,6.0,1.0,0.0,90.0,70.0,yes,QC.pass,58.0,58.0,Age > 54 Years,Stage II
+66,X11BR024,X11BR024,Tumor,969.0,female,white,[9e]-040c2b_D2,7,127C,Stage IIA,Basal,C4,negative,negative,0,0,excision,7.0,1.0,0.0,90.0,60.0,yes,QC.pass,80.0,80.0,Age > 54 Years,Stage II
+67,X11BR025,X11BR025,Tumor,929.0,female,white,[8d]-1444a0_D2,2,128C,Stage IIA,LumA,C2,positive,positive,3+,3+,excision,8.0,1.0,20.0,90.0,40.0,no,QC.pass,77.0,77.0,Age > 54 Years,Stage II
+68,X11BR027,X11BR027,Tumor,914.0,female,white,[41]-8e8136_D2,11,126,Stage IIA,LumA,C2,positive,positive,3+,2+,excision,11.0,2.0,3.0,70.0,80.0,yes,QC.pass,76.0,76.0,Age > 54 Years,Stage II
+69,X11BR028,X11BR028,Tumor,664.0,female,white,[3b]-4a253d_D2,4,126,Stage IIA,Her2,C1,negative,negative,0,0,excision,10.0,1.0,0.0,60.0,75.0,yes,QC.pass,55.0,55.0,Age > 54 Years,Stage II
+70,X11BR030,X11BR030,Tumor,609.0,female,asian,[63]-df0f7e_D2,6,126,Stage IIA,Her2,C1,negative,negative,0,0,excision,15.0,2.0,2.0,65.0,80.0,yes,QC.pass,50.0,50.0,Age < 54 Years,Stage II
+71,X11BR031,X11BR031|X11BR031.REP1,Tumor,600.0,female,asian,[3f]-4a92dd_D2,2|5,129C|130C,Stage IIA,LumA,C1,positive,positive,3+,3+,excision,10.0,1.0,5.0,65.0,70.0,no,QC.pass,50.0,50.0,Age < 54 Years,Stage II
+72,X11BR032,X11BR032,Tumor,597.0,female,asian,[31]-278173_D2,3,129N,Stage IIA,LumA,C3,positive,positive,3+,3+,excision,15.0,2.0,0.0,70.0,65.0,no,QC.pass,49.0,49.0,Age < 54 Years,Stage II
+73,X11BR036,X11BR036|X11BR036.REP1|X11BR036.REP2,Tumor,619.0,female,asian,[45]-ce5590_D2,10|12|17,128C|129C|130N,Stage IIA,Basal,C4,negative,negative,0,0,excision,15.0,2.0,10.0,90.0,80.0,no,QC.pass,51.0,51.0,Age < 54 Years,Stage II
+74,X11BR038,X11BR038,Tumor,569.0,female,asian,[4e]-b1f9ba_D2,10,128N,Stage IIA,Her2,C1,,,,,excision,10.0,1.0,10.0,60.0,55.0,no,QC.pass,47.0,47.0,Age < 54 Years,Stage II
+75,X11BR040,X11BR040,Tumor,814.0,female,asian,[d7]-07dd74_D2,9,128N,Stage IIIA,LumA,C3,positive,positive,3+,3+,excision,5.0,1.0,2.0,80.0,65.0,yes,QC.pass,67.0,67.0,Age > 54 Years,Stage III
+76,X11BR042,X11BR042,Tumor,857.0,female,white,[a1]-3b2e41_D2,8,130N,Stage IIA,Her2,C1,negative,negative,0,0,excision,8.0,1.0,15.0,60.0,70.0,yes,QC.pass,71.0,71.0,Age > 54 Years,Stage II
+77,X11BR043,X11BR043,Tumor,440.0,female,white,[6d]-316fca_D2,1,127N,Stage IIB,LumB,C2,positive,positive,3+,2+,excision,8.0,1.0,0.0,80.0,80.0,no,QC.pass,36.0,36.0,Age < 54 Years,Stage II
+78,X11BR044,X11BR044,Tumor,576.0,female,white,[d9]-0566fb_D2,8,128N,Stage IIIA,LumB,C2,positive,positive,3+,3+,excision,10.0,1.0,0.0,75.0,75.0,yes,QC.pass,48.0,48.0,Age < 54 Years,Stage III
+79,X11BR047,X11BR047,Tumor,710.0,female,asian,[ef]-0be77a_D2,1,126,Stage IIA,LumA,C3,positive,positive,2+,3+,excision,15.0,2.0,0.0,60.0,55.0,yes,QC.pass,59.0,59.0,Age > 54 Years,Stage II
+80,X11BR049,X11BR049,Tumor,550.0,female,asian,[2e]-3eaf5a_D2,1,127C,Stage IIIA,LumB,C2,positive,positive,3+,3+,excision,10.0,1.0,0.0,70.0,60.0,yes,QC.pass,45.0,45.0,Age < 54 Years,Stage III
+81,X11BR050,X11BR050,Tumor,648.0,female,asian,[d8]-c9c39d_D2,6,127C,Stage IIA,LumA,C3,positive,positive,3+,3+,excision,10.0,1.0,2.0,90.0,5.0,no,QC.pass,54.0,54.0,Age > 54 Years,Stage II
+82,X11BR051,X11BR051,Tumor,785.0,female,white,[56]-d976eb_D2,11,128N,Stage IIIA,LumA,C3,positive,positive,3+,3+,excision,10.0,1.0,5.0,70.0,60.0,no,QC.pass,65.0,65.0,Age > 54 Years,Stage III
+83,X11BR053,X11BR053|X11BR053.REP1,Tumor,743.0,female,white,[fb]-01074f_D2,3|11,126|129N,Stage IIA,LumB,C2,positive,positive,3+,3+,excision,10.0,1.0,0.0,80.0,50.0,no,QC.pass,61.0,61.0,Age > 54 Years,Stage II
+84,X11BR054,X11BR054,Tumor,1013.0,female,white,[b1]-a536b2_D2,7,130N,Stage IIA,LumA,C2,positive,positive,3+,3+,excision,9.0,1.0,0.0,75.0,70.0,no,QC.pass,84.0,84.0,Age > 54 Years,Stage II
+85,X11BR055,X11BR055,Tumor,675.0,female,white,[45]-621c07_D2,8,129N,Stage IIA,LumA,C3,positive,positive,3+,3+,excision,8.0,1.0,0.0,65.0,60.0,no,QC.pass,56.0,56.0,Age > 54 Years,Stage II
+86,X11BR056,X11BR056,Tumor,634.0,female,asian,[e4]-d43942_D2,10,127C,Stage IIB,LumA,C1,positive,negative,3+,0,excision,15.0,2.0,0.0,65.0,65.0,yes,QC.pass,52.0,52.0,Age < 54 Years,Stage II
+87,X11BR058,X11BR058,Tumor,787.0,female,asian,[80]-0b55dc_D2,13,129C,Stage IIA,Normal,C1,,,,,excision,5.0,1.0,0.0,75.0,65.0,no,QC.pass,65.0,65.0,Age > 54 Years,Stage II
+88,X11BR059,X11BR059,Tumor,551.0,female,asian,[fc]-038f61_D2,11,127C,Stage IIA,Normal,C1,,,,,excision,5.0,1.0,5.0,65.0,65.0,no,QC.pass,45.0,45.0,Age < 54 Years,Stage II
+89,X11BR060,X11BR060|X11BR060.REP1,Tumor,634.0,female,asian,[97]-bc4829_D2,11|16,129C|126,Stage IIB,Her2,C1,negative,negative,0,0,excision,5.0,1.0,0.0,65.0,60.0,yes,QC.pass,52.0,52.0,Age < 54 Years,Stage II
+90,X11BR072,X11BR072,Tumor,848.0,female,white,[59]-90e9a7_D2,10,130C,Stage IIIC,LumA,C3,positive,positive,3+,3+,excision,5.0,1.0,0.0,65.0,65.0,no,QC.pass,70.0,70.0,Age > 54 Years,Stage III
+91,X11BR073,X11BR073,Tumor,775.0,female,white,[5d]-4c7f39_D2,4,128N,Stage IIIA,LumB,C2,positive,positive,3+,3+,excision,5.0,1.0,0.0,60.0,65.0,yes,QC.pass,64.0,64.0,Age > 54 Years,Stage III
+92,X11BR074,X11BR074,Tumor,794.0,female,white,[12]-1aa7f8_D2,1,129C,Stage IIIA,LumA,C3,positive,positive,3+,3+,excision,5.0,1.0,0.0,60.0,60.0,yes,QC.pass,66.0,66.0,Age > 54 Years,Stage III
+93,X11BR075,X11BR075,Tumor,953.0,female,white,[55]-bebdaf_D2,11,130C,Stage IIIA,LumB,C2,,,,,excision,5.0,1.0,0.0,70.0,65.0,no,QC.pass,79.0,79.0,Age > 54 Years,Stage III
+94,X11BR080,X11BR080,Tumor,820.0,female,white,[e2]-55d2f2_D2,13,127N,Stage IIB,Basal,C4,positive,positive,1+,1+,excision,5.0,1.0,0.0,65.0,50.0,no,QC.pass,68.0,68.0,Age > 54 Years,Stage II
+95,X13BR009,X13BR009,Tumor,900.0,female,white,[87]-ceb820_D2,13,126,Stage IIIB,LumB,C2,positive,positive,3+,3+,excision,22.0,3.0,0.0,65.0,60.0,no,QC.pass,75.0,75.0,Age > 54 Years,Stage III
+96,X14BR005,X14BR005|X14BR005.REP1,Tumor,940.0,female,white,[23]-39cc8d_D2,8|16,127C|130C,Stage IIA,LumA,C2,positive,positive,,,excision,12.0,2.0,0.0,75.0,80.0,no,QC.pass,78.0,78.0,Age > 54 Years,Stage II
+97,X14BR008,X14BR008,Tumor,796.0,female,white,[ca]-6f2297_D2,3,127C,Stage IIIA,LumA,C3,positive,positive,,,excision,22.0,3.0,0.0,75.0,20.0,no,QC.pass,66.0,66.0,Age > 54 Years,Stage III
+98,X14BR014,X14BR014,Tumor,710.0,female,white,[d1]-8b9b72_D2,13,129N,Stage IIA,LumA,C3,positive,positive,3+,3+,excision,18.0,2.0,0.0,70.0,60.0,no,QC.pass,59.0,59.0,Age > 54 Years,Stage II
+99,X15BR003,X15BR003,Tumor,895.0,female,white,[43]-6c2e1a_D2,13,128C,Stage IIA,LumA,C3,positive,negative,3+,0,excision,1.0,1.0,0.0,60.0,60.0,no,QC.pass,74.0,74.0,Age > 54 Years,Stage II
+100,X16BR012,X16BR012,Tumor,570.0,female,white,[75]-b249c8_D2,12,127C,Stage IIIC,LumB,C2,,,,,excision,20.0,2.0,0.0,65.0,65.0,no,QC.pass,47.0,47.0,Age < 54 Years,Stage III
+101,X18BR002,X18BR002,Tumor,769.0,female,white,[fe]-c3b8ed_D2,3,128N,Stage IIIA,Her2,C3,negative,negative,0,0,excision,11.0,2.0,0.0,65.0,60.0,no,QC.pass,64.0,64.0,Age > 54 Years,Stage III
+102,X18BR003,X18BR003,Tumor,790.0,female,white,[43]-c5bfb5_D2,7,127N,Stage IIA,LumB,C2,positive,negative,3+,0,excision,7.0,1.0,5.0,75.0,70.0,yes,QC.pass,65.0,65.0,Age > 54 Years,Stage II
+103,X18BR004,X18BR004,Tumor,921.0,female,white,[b2]-af8275_D2,4,127N,Stage IIA,LumA,C2,positive,positive,3+,3+,excision,8.0,1.0,0.0,80.0,70.0,no,QC.pass,76.0,76.0,Age > 54 Years,Stage II
+104,X18BR006,X18BR006,Tumor,748.0,female,white,[be]-2f78e3_D2,10,129C,Stage IIA,LumB,C3,positive,positive,3+,3+,excision,8.0,1.0,0.0,65.0,60.0,yes,QC.pass,62.0,62.0,Age > 54 Years,Stage II
+105,X18BR007,X18BR007,Tumor,768.0,female,white,[1a]-7513d0_D2,6,127N,Stage IIA,LumA,C3,positive,positive,3+,3+,excision,11.0,2.0,0.0,60.0,60.0,no,QC.pass,64.0,64.0,Age > 54 Years,Stage II
+106,X18BR009,X18BR009,Tumor,762.0,female,white,[5c]-2dc513_D2,10,129N,Stage IIA,Normal,C1,negative,negative,0,0,excision,7.0,1.0,10.0,70.0,40.0,no,QC.pass,63.0,63.0,Age > 54 Years,Stage II
+107,X18BR010,X18BR010,Tumor,492.0,female,white,[0b]-a6643c_D2,1,128C,Stage IIIA,LumA,C3,positive,positive,0,0,excision,5.0,1.0,0.0,60.0,50.0,yes,QC.pass,41.0,41.0,Age < 54 Years,Stage III
+108,X18BR016,X18BR016,Tumor,885.0,female,white,[3b]-a5dbb6_D2,12,130N,Stage IA,LumA,C3,,,,,excision,9.0,1.0,0.0,70.0,65.0,no,QC.pass,73.0,73.0,Age > 54 Years,Stage I
+109,X18BR017,X18BR017,Tumor,872.0,female,white,[39]-326260_D2,1,130N,Stage IA,LumA,C1,positive,negative,2+,0,excision,14.0,2.0,10.0,75.0,55.0,yes,QC.pass,72.0,72.0,Age > 54 Years,Stage I
+110,X18BR019,X18BR019,Tumor,817.0,female,white,[0e]-77834e_D2,4,129N,Stage IIIA,LumA,C2,positive,positive,3+,3+,excision,13.0,2.0,0.0,65.0,60.0,yes,QC.pass,68.0,68.0,Age > 54 Years,Stage III
+111,X20BR001,X20BR001,Tumor,986.0,female,black.or.african.american,[35]-8590fd_D2,4,129C,Stage IIA,LumA,C2,positive,positive,3+,3+,excision,22.0,3.0,0.0,98.0,5.0,yes,QC.pass,82.0,82.0,Age > 54 Years,Stage II
+112,X20BR002,X20BR002,Tumor,1144.0,female,white,[ab]-24780f_D2,5,126,Stage IIA,Basal,C4,negative,positive,,,excision,16.0,2.0,0.0,70.0,55.0,no,QC.pass,95.0,95.0,Age > 54 Years,Stage II
+113,X20BR005,X20BR005,Tumor,568.0,female,black.or.african.american,[2f]-d60f3e_D2,4,127C,Stage IIB,Basal,C1,negative,negative,,,excision,26.0,3.0,2.0,65.0,70.0,yes,QC.pass,47.0,47.0,Age < 54 Years,Stage II
+114,X20BR006,X20BR006,Tumor,786.0,female,white,[3f]-e3d043_D2,17,128N,Stage IIB,Basal,C1,positive,negative,1+,,excision,18.0,2.0,10.0,80.0,70.0,no,QC.pass,65.0,65.0,Age > 54 Years,Stage II
+115,X20BR007,X20BR007,Tumor,660.0,female,black.or.african.american,[54]-d9d82c_D2,5,130N,Stage IIA,Basal,C1,negative,negative,0,,excision,16.0,2.0,0.0,75.0,70.0,yes,QC.pass,55.0,55.0,Age > 54 Years,Stage II
+116,X20BR008,X20BR008,Tumor,863.0,female,black.or.african.american,[b8]-8ae4b9_D2,5,127C,Stage IIIB,Her2,C1,negative,negative,0,0,excision,11.0,2.0,5.0,65.0,40.0,yes,QC.pass,71.0,71.0,Age > 54 Years,Stage III
+117,X21BR001,X21BR001,Tumor,,,white,[1f]-d9108c,16,128N,,LumB,C2,negative,negative,,,,,,0.0,60.0,80.0,no,QC.pass,,,Age > 54 Years,nan
+118,X21BR002,X21BR002,Tumor,,,white,[32]-22665e,16,128C,,LumA,C2,positive,positive,,,,,,0.0,65.0,60.0,no,QC.pass,,,Age > 54 Years,nan
+119,X21BR010,X21BR010|X21BR010.REP1,Tumor,852.0,female,white,[68]-4d3e43_D2,3|17,129C|128C,Stage IIA,LumA,C1,positive,positive,3+,3+,excision,18.0,2.0,0.0,60.0,55.0,yes,QC.pass,71.0,71.0,Age > 54 Years,Stage II
+120,X22BR005,X22BR005,Tumor,552.0,female,white,[12]-1af490_D2,6,129N,Stage IIB,LumA,C1,positive,positive,3+,3+,excision,20.0,2.0,15.0,65.0,75.0,no,QC.pass,46.0,46.0,Age < 54 Years,Stage II
+121,X22BR006,X22BR006,Tumor,660.0,female,black.or.african.american,[a2]-5d5f11_D2,10,130N,Stage IIIA,LumA,C2,positive,positive,2+,3+,excision,25.0,3.0,,,,no,QC.pass,55.0,55.0,Age > 54 Years,Stage III
